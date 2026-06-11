@@ -1,14 +1,21 @@
 # AJet AASA
 
-This repository versions the Apple App Site Association file used by
-`ajet.com` and `www.ajet.com`.
+This repository versions and deploys the Apple App Site Association file used
+by `ajet.com` and `www.ajet.com`.
 
 ## Published file
 
-GitHub Pages source:
+Vercel source endpoint:
 
 ```text
-https://onderguler.github.io/ajet-aasa/.well-known/apple-app-site-association
+https://ajet-aasa.vercel.app/.well-known/apple-app-site-association
+```
+
+The endpoint is deployed automatically from `main` and returns:
+
+```text
+HTTP 200
+Content-Type: application/json; charset=utf-8
 ```
 
 Public application endpoints:
@@ -19,13 +26,7 @@ https://www.ajet.com/.well-known/apple-app-site-association
 ```
 
 The AJet web/CDN layer must reverse-proxy the public application endpoints to
-the GitHub Pages source without returning a redirect. The public responses must
-return:
-
-```text
-HTTP 200
-Content-Type: application/json
-```
+the Vercel endpoint without returning a redirect.
 
 ## Route ownership
 
@@ -50,11 +51,12 @@ The CMS `DEEPLINKMANAGEMENT` configuration must map
 
 ```bash
 jq empty .well-known/apple-app-site-association
+curl -i https://ajet-aasa.vercel.app/.well-known/apple-app-site-association
 curl -i https://ajet.com/.well-known/apple-app-site-association
 curl -i https://www.ajet.com/.well-known/apple-app-site-association
 ```
 
-Confirm that each `curl` response is `200`, has
+Confirm that each public application endpoint is `200`, has
 `Content-Type: application/json`, has no redirect, and contains the current
 GitHub version.
 
