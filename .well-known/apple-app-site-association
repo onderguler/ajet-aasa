@@ -1,0 +1,63 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "93W75W4C94.com.ajet.mobile",
+        "paths": [
+          "/",
+          "/tr",
+          "/en",
+          "/tr/ucusyonetimi",
+          "/en/mytrips",
+          "/tr/checkin",
+          "/en/checkin",
+          "/checkin/boardingpass",
+          "/metasearch",
+          "/app",
+          "/search",
+          "/booking/availability*",
+          "/flight-status-detail*",
+          "NOT /*"
+        ]
+      },
+      {
+        "appID": "35MYG4AN5S.com.ajet.mobile.dev",
+        "paths": [
+          "/mobile-dev/*",
+          "NOT /*"
+        ]
+      },
+      {
+        "appID": "35MYG4AN5S.com.ajet.mobile.test",
+        "paths": [
+          "/mobile-test/*",
+          "NOT /*"
+        ]
+      },
+      {
+        "appID": "35MYG4AN5S.com.ajet.mobile.preprod",
+        "paths": [
+          "/mobile-preprod/*",
+          "NOT /*"
+        ]
+      },
+      {
+        "appID": "35MYG4AN5S.com.ajet.mobile.pilot",
+        "paths": [
+          "/mobile-pilot/*",
+          "NOT /*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "93W75W4C94.com.ajet.mobile",
+      "35MYG4AN5S.com.ajet.mobile.dev",
+      "35MYG4AN5S.com.ajet.mobile.test",
+      "35MYG4AN5S.com.ajet.mobile.preprod",
+      "35MYG4AN5S.com.ajet.mobile.pilot"
+    ]
+  }
+}
