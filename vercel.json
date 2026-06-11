@@ -14,5 +14,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/mobile-test/:path*",
+      "destination": "https://ajet.com/:path*",
+      "permanent": false
+    }
   ]
 }
