@@ -15,11 +15,10 @@
       ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "source": "/mobile-test/:path*",
-      "destination": "https://ajet.com/:path*",
-      "permanent": false
+      "destination": "/mobile-test.html"
     }
   ]
 }
