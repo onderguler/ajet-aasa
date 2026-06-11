@@ -1,0 +1,9 @@
+# Replace <github-owner> before deployment.
+location = /.well-known/apple-app-site-association {
+    proxy_pass https://onderguler.github.io/ajet-aasa/.well-known/apple-app-site-association;
+    proxy_ssl_server_name on;
+    proxy_set_header Host onderguler.github.io;
+
+    proxy_hide_header Content-Type;
+    add_header Content-Type application/json always;
+}
